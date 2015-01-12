@@ -8,8 +8,8 @@ int main()
 
 	std::cout << "90 Deg = " << Angle(90, Deg).Get() << " rad\n";
 
-    Image Img(256, 256);
-    for(SizeType X = 0; X < Img.Width(); ++X)
+	Image Img(256, 256);
+	for(SizeType X = 0; X < Img.Width(); ++X)
 	{
 		for(SizeType Y = 0; Y < Img.Height(); ++Y)
 		{
