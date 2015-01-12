@@ -152,6 +152,12 @@ void LTT_TrippyColors::BasicImage<T>::Swap(BasicImage& Rhs)
 }
 
 template<typename T>
+void LTT_TrippyColors::swap(BasicImage<T>& Lhs, BasicImage<T>& Rhs)
+{
+	Lhs.Swap(Rhs);
+}
+
+template<typename T>
 LTT_TrippyColors::BasicImage<T> LTT_TrippyColors::ScaleUp(BasicImage<T> const& Object, SizeType Factor)
 {
 	BasicImage<T> Result(Object.Width() * Factor, Object.Height() * Factor);

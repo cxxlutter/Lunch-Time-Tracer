@@ -52,6 +52,9 @@ namespace LTT_TrippyColors
 	typedef BasicImage<ImageColor> Image;
 
 	template<typename T>
+	void swap(BasicImage<T>& Lhs, BasicImage<T>& Rhs);
+
+	template<typename T>
 	BasicImage<T> ScaleUp(BasicImage<T> const& Object, SizeType Factor);
 	template<typename T>
 	BasicImage<T> ScaleDown(BasicImage<T> const& Object, SizeType Factor);
