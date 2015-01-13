@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 #include <LunchTimeTracer.hpp>
 
@@ -6,8 +7,10 @@ int main()
 {
 	using namespace LTT;
 
+	// Angle conversion
 	std::cout << "90 Deg = " << Angle(90, Deg).Get() << " rad\n";
 
+	// Bitmap output and HSV to RGB conversion
 	Image Img(256, 256);
 	for(SizeType X = 0; X < Img.Width(); ++X)
 	{
@@ -18,4 +21,12 @@ int main()
 	}
 
 	SaveAsBmp(Img, "Test.bmp");
+
+	// Logging
+	std::ofstream LogFile("LTT.log", std::ofstream::app);
+	std::clog.rdbuf(LogFile.rdbuf());
+
+	Log(mtInfo) << "Some unimportant info\n";
+	SetLogMode(mtInfo, lmIgnore);
+	Log(mtInfo) << "Some unimportant info, that is being ignored\n";
 }

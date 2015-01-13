@@ -10,6 +10,7 @@
 #include <LunchTimeTracer/Color.hpp>
 #include <LunchTimeTracer/Fundamental.hpp>
 #include <LunchTimeTracer/Image.hpp>
+#include <LunchTimeTracer/Log.hpp>
 #include <LunchTimeTracer/TypeTraits.hpp>
 #include <LunchTimeTracer/Utility.hpp>
 
