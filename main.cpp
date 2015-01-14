@@ -24,9 +24,9 @@ int main()
 
 	// Logging
 	std::ofstream LogFile("LTT.log", std::ofstream::app);
-	std::clog.rdbuf(LogFile.rdbuf());
+	RdbufSaver RdbufGuard(std::clog, LogFile.rdbuf());
 
 	Log(mtInfo) << "Some unimportant info\n";
 	SetLogMode(mtInfo, lmIgnore);
-	Log(mtInfo) << "Some unimportant info, that is being ignored\n";
+	Log(mtInfo) << "Some unimportant info that is being ignored\n";
 }

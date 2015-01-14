@@ -13,6 +13,7 @@
 #include <LunchTimeTracer/Log.hpp>
 #include <LunchTimeTracer/TypeTraits.hpp>
 #include <LunchTimeTracer/Utility.hpp>
+#include <LunchTimeTracer/RdbufSaver.hpp>
 
 namespace LTT = LTT_TrippyColors;
 
