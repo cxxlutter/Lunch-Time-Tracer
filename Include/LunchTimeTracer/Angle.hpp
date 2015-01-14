@@ -18,7 +18,7 @@ namespace LTT_TrippyColors
 		template<typename T>
 		static T From(T Value);
 	};
-	const RadType Rad;
+	const RadType Rad = RadType();
 
 	struct DegType
 	{
@@ -28,7 +28,7 @@ namespace LTT_TrippyColors
 		template<typename T>
 		static T From(T Value);
 	};
-	const DegType Deg;
+	const DegType Deg = DegType();
 
 	template<typename T>
 	class BasicAngle

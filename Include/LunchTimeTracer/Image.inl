@@ -108,14 +108,14 @@ void LTT_TrippyColors::BasicImage<T>::ResizeKeep(SizeType NewWidth, SizeType New
 	{
 		for(SizeType Y = 0; Y < New.Height(); ++Y)
 		{
-			New(X, Y) = (*this)(X, Y);
+			New(X, Y) = Value;
 		}
 	}
 	for(SizeType Y = MinY; Y < New.Height(); ++Y)
 	{
 		for(SizeType X = 0; X < MinX; ++X)
 		{
-			New(X, Y) = (*this)(X, Y);
+			New(X, Y) = Value;
 		}
 	}
 
@@ -314,4 +314,4 @@ bool LTT_TrippyColors::SaveAsBmp(Image const& Object, CString Filename)
 	return true;
 }
 
-#endif // LunchTimeTracer_Image_hpp_included
+#endif // LunchTimeTracer_Image_inl_included

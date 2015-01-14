@@ -74,7 +74,7 @@ typename LTT_TrippyColors::BasicAngle<T>::ValueType LTT_TrippyColors::BasicAngle
 
 template<typename T>
 template<typename UnitT>
-typename LTT_TrippyColors::BasicAngle<T>::ValueType LTT_TrippyColors::BasicAngle<T>::Get(UnitT Unit) const
+typename LTT_TrippyColors::BasicAngle<T>::ValueType LTT_TrippyColors::BasicAngle<T>::Get(UnitT) const
 {
 	return UnitT::To(Angle);
 }
@@ -87,7 +87,7 @@ void LTT_TrippyColors::BasicAngle<T>::Set(ValueType NewAngle)
 
 template<typename T>
 template<typename UnitT>
-void LTT_TrippyColors::BasicAngle<T>::Set(ValueType NewAngle, UnitT Unit)
+void LTT_TrippyColors::BasicAngle<T>::Set(ValueType NewAngle, UnitT)
 {
 	Angle = UnitT::From(NewAngle);
 }
